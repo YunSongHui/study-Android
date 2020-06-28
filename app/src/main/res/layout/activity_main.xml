@@ -1,13 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <Button
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button1"
-        android:text="@string/strBtn1"/>
+        android:minHeight="?attr/actionBarSize">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="타이틀"
+            android:textColor="#ffffff"
+            android:textSize="25dp">
+        </TextView>
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rg_btn1"
+                android:layout_width="87dp"
+                android:layout_height="141dp"
+                android:layout_weight="1"
+                android:button="@drawable/like"
+                android:text="좋아요" />
+
+            <RadioButton
+                android:id="@+id/rg_btn2"
+                android:layout_width="100dp"
+                android:layout_height="142dp"
+                android:layout_weight="1"
+                android:button="@drawable/unlike"
+                android:text="나빠요" />
+        </RadioGroup>
+    </RelativeLayout>
 
 </LinearLayout>
